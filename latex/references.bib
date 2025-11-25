@@ -1,0 +1,152 @@
+@techReport{Li2024,
+   abstract = {This work tackles the problem of geo-localization with a new paradigm using a large vision-language model (LVLM) augmented with human inference knowledge. A primary challenge here is the scarcity of data for training the LVLM-existing street-view datasets often contain numerous low-quality images lacking visual clues, and lack any reasoning inference. To address the data-quality issue, we devise a CLIP-based network to quantify the degree of street-view images being locatable, leading to the creation of a new dataset comprising highly locatable street views. To enhance reasoning inference, we integrate external knowledge obtained from real geo-localization games, tapping into valuable human inference capabilities. The data are utilized to train GeoRe-asoner, which undergoes fine-tuning through dedicated reasoning and location-tuning stages. Qualitative and quantitative evaluations illustrate that GeoReasoner outperforms counterpart LVLMs by more than 25% at country-level and 38% at city-level geo-localization tasks, and surpasses Street-CLIP performance while requiring fewer training resources. The data and code are available at https://github.com/lingli1996/GeoReasoner.},
+   author = {Ling Li and Yu Ye and Bingchuan Jiang and Wei Zeng},
+   keywords = {ICML,Machine Learning},
+   title = {GeoReasoner: Geo-localization with Reasoning in Street Views using a Large Vision-Language Model},
+   url = {https://github.com/lingli1996/GeoReasoner.},
+   year = {2024}
+}
+@article{Liu2024,
+   abstract = {Geolocation is now a vital aspect of modern life, offering numerous benefits but also presenting serious privacy concerns. The advent of large vision-language models (LVLMs) with advanced image-processing capabilities introduces new risks, as these models can inadvertently reveal sensitive geolocation information. This paper presents the first in-depth study analyzing the challenges posed by traditional deep learning and LVLM-based geolocation methods. Our findings reveal that LVLMs can accurately determine geolocations from images, even without explicit geographic training. To address these challenges, we introduce \tool\{\}, an innovative framework that significantly enhances image-based geolocation accuracy. \tool\{\} employs a systematic chain-of-thought (CoT) approach, mimicking human geoguessing strategies by carefully analyzing visual and contextual cues such as vehicle types, architectural styles, natural landscapes, and cultural elements. Extensive testing on a dataset of 50,000 ground-truth data points shows that \tool\{\} outperforms both traditional models and human benchmarks in accuracy. It achieves an impressive average score of 4550.5 in the GeoGuessr game, with an 85.37\% win rate, and delivers highly precise geolocation predictions, with the closest distances as accurate as 0.3 km. Furthermore, our study highlights issues related to dataset integrity, leading to the creation of a more robust dataset and a refined framework that leverages LVLMs' cognitive capabilities to improve geolocation precision. These findings underscore \tool\{\}'s superior ability to interpret complex visual data, the urgent need to address emerging security vulnerabilities posed by LVLMs, and the importance of responsible AI development to ensure user privacy protection.},
+   author = {Yi Liu and Junchen Ding and Gelei Deng and Yuekang Li and Tianwei Zhang and Weisong Sun and Yaowen Zheng and Jingquan Ge and Yang Liu},
+   month = {8},
+   title = {Image-Based Geolocation Using Large Vision-Language Models},
+   url = {http://arxiv.org/abs/2408.09474},
+   year = {2024}
+}
+@techReport{Stillman2025,
+   abstract = {Geographic biases in Large Language Models (LLMs) are evident. Research has shown that both the training data and outputs of LLMs are skewed towards western and economically affluent countries, resulting in the underrepresentation of certain regions. In addition, LLMs are prone to hallucinations, which can lead to the generation of incorrect or fabricated information. In this paper, we present an additional analysis of the geographic knowledge and geospatial reasoning of LLMs through two experiments carried out in English on a global scale. Specifically, we evaluate the geospatial capabilities of four open-source LLMs, namely: Llama 2-7B, Llama 3 (8B and 70B) and Phi-3-mini-4k, and demonstrate that geographic knowledge within LLMs is unevenly distributed across different regions of the world. This imbalance could lead to unfair treatment of certain areas and impact various applications that use geographic knowledge, including mobility and remote sensing applications, that aim to use LLMs for data analysis and decision-making.},
+   author = {Mila Stillman and Anna Kruspe},
+   keywords = {Bias,Fairness,Geospatial data,Large Language Models,Reasoning},
+   title = {Biased Geolocation in LLMs: Experiments on Probing LLMs for Geographic Knowledge and Reasoning},
+   year = {2025}
+}
+@article{Campos2025,
+   abstract = {Image geolocalization, in which, traditionally, an AI model predicts the precise GPS coordinates of an image is a challenging task with many downstream applications. However, the user cannot utilize the model to further their knowledge other than the GPS coordinate; the model lacks an understanding of the location and the conversational ability to communicate with the user. In recent days, with tremendous progress of large multimodal models (LMMs) -- proprietary and open-source -- researchers have attempted to geolocalize images via LMMs. However, the issues remain unaddressed; beyond general tasks, for more specialized downstream tasks, one of which is geolocalization, LMMs struggle. In this work, we propose to solve this problem by introducing a conversational model GAEA that can provide information regarding the location of an image, as required by a user. No large-scale dataset enabling the training of such a model exists. Thus we propose GAEA-1.6M, a comprehensive dataset with 800K images and around 1.6M question-answer pairs constructed by leveraging OpenStreetMap (OSM) attributes and geographical context clues. For quantitative evaluation, we propose a diverse benchmark, GAEA-Bench, comprising 4K image-text pairs to evaluate conversational capabilities equipped with diverse question types. We consider 11 state-of-the-art open-source and proprietary LMMs and demonstrate that GAEA significantly outperforms the best open-source model, LLaVA-OneVision by 25.69% and the best proprietary model, GPT-4o by 8.28%. Our dataset, model and codes are available.},
+   author = {Ron Campos and Ashmal Vayani and Parth Parag Kulkarni and Rohit Gupta and Aritra Dutta and Mubarak Shah},
+   month = {3},
+   title = {GAEA: A Geolocation Aware Conversational Model},
+   url = {http://arxiv.org/abs/2503.16423},
+   year = {2025}
+}
+@article{Yerramilli2025,
+   abstract = {This paper introduces GeoChain, a large-scale benchmark for evaluating step-by-step geographic reasoning in multimodal large language models (MLLMs). Leveraging 1.46 million Mapillary street-level images, GeoChain pairs each image with a 21-step chain-of-thought (CoT) question sequence (over 30 million Q&A pairs). These sequences guide models from coarse attributes to fine-grained localization across four reasoning categories - visual, spatial, cultural, and precise geolocation - annotated by difficulty. Images are also enriched with semantic segmentation (150 classes) and a visual locatability score. Our benchmarking of contemporary MLLMs (GPT-4.1 variants, Claude 3.7, Gemini 2.5 variants) on a diverse 2,088-image subset reveals consistent challenges: models frequently exhibit weaknesses in visual grounding, display erratic reasoning, and struggle to achieve accurate localization, especially as the reasoning complexity escalates. GeoChain offers a robust diagnostic methodology, critical for fostering significant advancements in complex geographic reasoning within MLLMs.},
+   author = {Sahiti Yerramilli and Nilay Pande and Rynaa Grover and Jayant Sravan Tamarapalli},
+   month = {7},
+   title = {GeoChain: Multimodal Chain-of-Thought for Geographic Reasoning},
+   url = {http://arxiv.org/abs/2506.00785},
+   year = {2025}
+}
+@article{Mioduski2025,
+   abstract = {Virginia's seventeenth- and eighteenth-century land patents survive primarily as narrative metes-and-bounds descriptions, limiting spatial analysis. This study systematically evaluates current-generation large language models (LLMs) in converting these prose abstracts into geographically accurate latitude/longitude coordinates within a focused evaluation context. A digitized corpus of 5,471 Virginia patent abstracts (1695-1732) is released, with 43 rigorously verified test cases serving as an initial, geographically focused benchmark. Six OpenAI models across three architectures (o-series, GPT-4-class, and GPT-3.5) were tested under two paradigms: direct-to-coordinate and tool-augmented chain-of-thought invoking external geocoding APIs. Results were compared with a GIS-analyst baseline, the Stanford NER geoparser, Mordecai-3, and a county-centroid heuristic. The top single-call model, o3-2025-04-16, achieved a mean error of 23 km (median 14 km), outperforming the median LLM (37.4 km) by 37.5%, the weakest LLM (50.3 km) by 53.5%, and external baselines by 67% (GIS analyst) and 70% (Stanford NER). A five-call ensemble further reduced errors to 19 km (median 12 km) at minimal additional cost (approx. USD 0.20 per grant), outperforming the median LLM by 48.6%. A patentee-name-redaction ablation increased error by about 9%, indicating reliance on textual landmark and adjacency descriptions rather than memorization. The cost-efficient gpt-4o-2024-08-06 model maintained a 28 km mean error at USD 1.09 per 1,000 grants, establishing a strong cost-accuracy benchmark; external geocoding tools offered no measurable benefit in this evaluation. These findings demonstrate the potential of LLMs for scalable, accurate, and cost-effective historical georeferencing.},
+   author = {Ryan Mioduski},
+   month = {7},
+   title = {Benchmarking Large Language Models for Geolocating Colonial Virginia Land Grants},
+   url = {http://arxiv.org/abs/2508.08266},
+   year = {2025}
+}
+@article{Feng2025,
+   abstract = {Urban research involves a wide range of scenarios and tasks that require the understanding of multi-modal data. Current methods often focus on specific data types and lack a unified framework in urban field for processing them comprehensively. The recent success of multi-modal large language models (MLLMs) presents a promising opportunity to overcome this limitation. In this paper, we introduce $\textit\{UrbanLLaVA\}$, a multi-modal large language model designed to process these four types of data simultaneously and achieve strong performance across diverse urban tasks compared with general MLLMs. In $\textit\{UrbanLLaVA\}$, we first curate a diverse urban instruction dataset encompassing both single-modal and cross-modal urban data, spanning from location view to global view of urban environment. Additionally, we propose a multi-stage training framework that decouples spatial reasoning enhancement from domain knowledge learning, thereby improving the compatibility and downstream performance of $\textit\{UrbanLLaVA\}$ across diverse urban tasks. Finally, we also extend existing benchmark for urban research to assess the performance of MLLMs across a wide range of urban tasks. Experimental results from three cities demonstrate that $\textit\{UrbanLLaVA\}$ outperforms open-source and proprietary MLLMs in both single-modal tasks and complex cross-modal tasks and shows robust generalization abilities across cities. Source codes and data are openly accessible to the research community via https://github.com/tsinghua-fib-lab/UrbanLLaVA.},
+   author = {Jie Feng and Shengyuan Wang and Tianhui Liu and Yanxin Xi and Yong Li},
+   month = {6},
+   title = {UrbanLLaVA: A Multi-modal Large Language Model for Urban Intelligence with Spatial Reasoning and Understanding},
+   url = {http://arxiv.org/abs/2506.23219},
+   year = {2025}
+}
+@techReport{He2025,
+   abstract = {In the geospatial domain, universal representation models are significantly less prevalent than their extensive use in natural language processing and computer vision. This discrepancy arises primarily from the high costs associated with the input of existing representation models, which often require street views and mobility data. To address this, we develop a novel, training-free method that leverages large language models (LLMs) and auxiliary map data from OpenStreetMap to derive geolocation representations (LLMGeovec). LLMGeovec can represent the geographic semantics of city, country, and global scales, which acts as a generic enhancer for spatio-temporal learning. Specifically, by direct feature concatenation, we introduce a simple yet effective paradigm for enhancing multiple spatio-temporal tasks including geographic prediction (GP), long-term time series forecasting (LTSF), and graph-based spatio-temporal forecasting (GSTF). LLMGeovec can seamlessly integrate into a wide spectrum of spatio-temporal learning models, providing immediate enhancements. Experimental results demonstrate that LLMGeovec achieves global coverage and significantly boosts the performance of leading GP, LTSF, and GSTF models.},
+   author = {Junlin He and Tong Nie and Wei Ma},
+   keywords = {Application Domains (APP): APP: General,Machine Learning (ML): ML: Representation Learning,Natural Language Processing (NLP): NLP: (Large) Language Models},
+   title = {Geolocation Representation from Large Language Models are Generic Enhancers for Spatio-Temporal Learning},
+   url = {www.aaai.org},
+   year = {2025}
+}
+@article{Liu2025,
+   abstract = {In the age of ubiquitous smartphone use and widespread image sharing on social platforms, geolocation poses a critical privacy concern. Images often carry sensitive spatial and temporal details—such as street signs, architectural styles, or landmarks—that can inadvertently disclose the precise whereabouts of individuals and organizations. Recent advances in large vision-language models (LVLMs) present an emerging threat by enabling users, regardless of technical expertise, to extract location cues from seemingly benign photos. While existing AI-driven geolocation solutions often focus on narrow datasets or specialized contexts, the generalizable performance and privacy implications of zero-shot LVLMs in real-world settings remain critical questions. In this paper, we investigate the geolocation capabilities of state-of-the-art LVLMs. Our findings reveal that while these models demonstrate a non-negligible capability for image-based geolocation even without specialized training, their accuracy in absolute terms is often low, exposing clear limitations in their current state. We then introduce ETHAN, a framework integrating chain-of-thought (CoT) reasoning. Although ETHAN shows improved performance (e.g., 28.7% accuracy at the 1km threshold) and an 85.4% win rate on GeoGuessr, these results primarily highlight the potential trajectory of such technologies rather than their current widespread, high-accuracy applicability. Our study underscores the dual nature of LVLMs in this domain: they uncover an emerging privacy risk due to their inherent, albeit limited, geolocation abilities, yet also demonstrate significant constraints. We conclude by calling for further research into the limitations and risks of LVLM-based geolocation and the development of effective mitigation strategies to protect sensitive location data.},
+   author = {Yi Liu and Gelei Deng and Junchen Ding and Yuekang Li and Tianwei Zhang and Weisong Sun and Yaowen Zheng and Jingquan Ge},
+   doi = {10.56553/popets-2025-0137},
+   issue = {4},
+   journal = {Proceedings on Privacy Enhancing Technologies},
+   month = {10},
+   pages = {410-428},
+   publisher = {Privacy Enhancing Technologies Symposium Advisory Board},
+   title = {Mission: Impossible – Image-Based Geolocation with Large Vision Language Models},
+   volume = {2025},
+   year = {2025}
+}
+@techReport{Zhou2025,
+   abstract = {Recent evaluations of Large Multimodal Models (LMMs) have explored their capabilities in various domains, with only few benchmarks specifically focusing on urban environments. Moreover, existing urban benchmarks have been limited to evaluating LMMs with basic region-level urban tasks under singular views, leading to incomplete evaluations of LMMs' abilities in urban environments. To address these issues, we present UrBench, a comprehensive benchmark designed for evaluating LMMs in complex multi-view urban scenarios. UrBench contains 11.6K meticulously curated questions at both region-level and role-level that cover 4 task dimensions: Geo-Localization, Scene Reasoning, Scene Understanding, and Object Understanding, totaling 14 task types. In constructing UrBench, we utilize data from existing datasets and additionally collect data from 11 cities, creating new annotations using a cross-view detection-matching method. With these images and annotations, we then integrate LMM-based, rule-based, and human-based methods to construct large-scale high-quality questions. Our evaluations on 21 LMMs show that current LMMs struggle in the urban environments in several aspects. Even the best performing GPT-4o lags behind humans in most tasks, ranging from simple tasks such as counting to complex tasks such as orientation, localization and object attribute recognition, with an average performance gap of 17.4%. Our benchmark also reveals that LMMs exhibit inconsistent behaviors with different urban views, especially with respect to understanding cross-view relations. Project-https://opendatalab.github.io/UrBench/ Appendix-https://github.com/opendatalab/UrBench/ blob/master/static/appendix.pdf},
+   author = {Baichuan Zhou and Haote Yang and Dairong Chen and Junyan Ye and Tianyi Bai and Jinhua Yu and Songyang Zhang and Dahua Lin and Conghui He and Weijia Li},
+   keywords = {Computer Vision(CV): CV: Applications,Computer Vision(CV): CV: Language and Vision,Computer Vision(CV): CV: Multi-modal Vision,Computer Vision(CV): CV: Visual Reasoning & Symbolic Representations},
+   title = {UrBench: A Comprehensive Benchmark for Evaluating Large Multimodal Models in Multi-View Urban Scenarios},
+   url = {https://github.com/opendatalab/UrBench/},
+   year = {2025}
+}
+@article{Yi2025,
+   abstract = {Accurately determining the geographic location where a single image was taken, visual geolocation, remains a formidable challenge due to the planet's vastness and the deceptive similarity among distant locations. We introduce GeoLocSFT, a framework that demonstrates how targeted supervised fine-tuning (SFT) of a large multimodal foundation model (Gemma 3) using a small, high-quality dataset can yield highly competitive geolocation performance. GeoLocSFT is trained with only 2700 carefully selected image-GPS pairs from our geographically diverse MR600k dataset. Despite this limited data, our SFT-centric approach substantially improves over baseline models and achieves robust results on standard benchmarks such as Im2GPS-3k and YFCC-4k, as well as on our newly proposed and challenging MR40k benchmark, aimed specifically at sparsely populated regions. Further, we explore multi-candidate inference and aggregation strategies but find that the core gains are already realized at the SFT stage. Our findings highlight the power of high-quality supervision and efficient SFT for planet-scale image geolocation, especially when compared to prior methods that require massive databases or complex pipelines. To foster further research, we publicly release the MR40k benchmark dataset.},
+   author = {Qiang Yi and Lianlei Shan},
+   month = {6},
+   title = {GeoLocSFT: Efficient Visual Geolocation via Supervised Fine-Tuning of Multimodal Foundation Models},
+   url = {http://arxiv.org/abs/2506.01277},
+   year = {2025}
+}
+@article{anl2025,
+   abstract = {This study aims to comprehensively examine the potential of artificial intelligence (AI) technologies in geography education in terms of their application domains, pedagogical contributions, and key challenges. Using a descriptive method based on a literature review, the findings reveal that natural language processing, learning analytics, location-based systems, and intelligent tutoring systems effectively support student-centered learning. AI applications contribute significantly to physical and human geography instruction mapping, classification, analysis, and prediction tasks. However, limitations such as inadequate infrastructure, disparities in teacher competencies, and ethical/privacy concerns hinder effective classroom integration. Therefore, the study recommends developing in-service teacher training programs, implementing AI-supported instructional scenarios, creating culturally responsive and localized content, and promoting ethical data use awareness. It also emphasizes the need for experimental research using quantitative and qualitative methods to evaluate AI's pedagogical value in enhancing students' mapping skills, spatial thinking, and conceptual understanding. Overall, AI technologies are not merely technical tools but transformative mechanisms capable of reshaping geography learning environments.},
+   author = {Cennet Şanlı},
+   doi = {10.46328/ijces.170},
+   issue = {1},
+   journal = {International Journal of Current Educational Studies},
+   month = {6},
+   pages = {47-76},
+   publisher = {ISTES Organization},
+   title = {Artificial Intelligence in Geography Teaching: Potentialities, Applications, And Challenges},
+   volume = {4},
+   year = {2025}
+}
+@article{Yang2024,
+   abstract = {To ensure the sustainable development of artificial intelligence (AI) application in urban and geospatial science, it is important to protect the geographic privacy, or geo-privacy, which refers to an individual’s geographic location details. As a crucial aspect of personal security, geo-privacy plays a key role not only in individual protection but also in maintaining ethical standards in geoscientific practices. Despite its importance, geo-privacy is often not sufficiently addressed in daily activities. With the increasing use of large multimodal models (LMMs) such as GPT-4 for open-source intelligence (OSINT), the risks related to geo-privacy breaches have significantly escalated. This study introduces a novel GPT-4-based model, GeoLocator, integrated with location capabilities, and conducts four experiments to evaluate its ability to accurately infer location information from images and social media content. The results demonstrate that GeoLocator can generate specific geographic details with high precision, thereby increasing the potential for inadvertent exposure of sensitive geospatial information. This highlights the dual challenges posed by online data-sharing and information-gathering technologies in the context of geo-privacy. We conclude with a discussion on the broader impacts of GeoLocator and our findings on individuals and communities, emphasizing the urgent need for increased awareness and protective measures against geo-privacy breaches in the era of advancing AI and widespread social media usage. This contribution thus advocates for sustainable and responsible geoscientific practices.},
+   author = {Yifan Yang and Siqin Wang and Daoyang Li and Shuju Sun and Qingyang Wu},
+   doi = {10.3390/app14167091},
+   issn = {20763417},
+   issue = {16},
+   journal = {Applied Sciences (Switzerland)},
+   keywords = {GPT-4,geo-privacy,image comprehension,large multimodal model (LMM),open-source intelligence (OSINT)},
+   month = {8},
+   publisher = {Multidisciplinary Digital Publishing Institute (MDPI)},
+   title = {GeoLocator: A Location-Integrated Large Multimodal Model (LMM) for Inferring Geo-Privacy},
+   volume = {14},
+   year = {2024}
+}
+@article{Hao2025,
+   abstract = {Location Intelligence (LI), the science of transforming location-centric geospatial data into actionable knowledge, has become a cornerstone of modern spatial decision-making. The rapid evolution of Geospatial Representation Learning is fundamentally reshaping LI development through two successive technological revolutions: the deep learning breakthrough and the emerging large language model (LLM) paradigm. While deep neural networks (DNNs) have demonstrated remarkable success in automated feature extraction from structured geospatial data (e.g., satellite imagery, GPS trajectories), the recent integration of LLMs introduces transformative capabilities for cross-modal geospatial reasoning and unstructured geo-textual data processing. This survey presents a comprehensive review of geospatial representation learning across both technological eras, organizing them into a structured taxonomy based on the complete pipeline comprising: (1) data perspective, (2) methodological perspective and (3) application perspective. We also highlight current advancements, discuss existing limitations, and propose potential future research directions in the LLM era. This work offers a thorough exploration of the field and providing a roadmap for further innovation in LI. The summary of the up-to-date paper list can be found in https://github.com/CityMind-Lab/Awesome-Location-Intelligence and will undergo continuous updates.},
+   author = {Xixuan Hao and Yutian Jiang and Xingchen Zou and Jiabo Liu and Yifang Yin and Yuxuan Liang},
+   month = {5},
+   title = {Unlocking Location Intelligence: A Survey from Deep Learning to The LLM Era},
+   url = {http://arxiv.org/abs/2505.09651},
+   year = {2025}
+}
+@article{Wang2024,
+   abstract = {Image geolocation is a critical task in various image-understanding applications. However, existing methods often fail when analyzing challenging, in-the-wild images. Inspired by the exceptional background knowledge of multimodal language models, we systematically evaluate their geolocation capabilities using a novel image dataset and a comprehensive evaluation framework. We first collect images from various countries via Google Street View. Then, we conduct training-free and training-based evaluations on closed-source and open-source multi-modal language models. we conduct both training-free and training-based evaluations on closed-source and open-source multimodal language models. Our findings indicate that closed-source models demonstrate superior geolocation abilities, while open-source models can achieve comparable performance through fine-tuning.},
+   author = {Zhiqiang Wang and Dejia Xu and Rana Muhammad Shahroz Khan and Yanbin Lin and Zhiwen Fan and Xingquan Zhu},
+   month = {5},
+   title = {LLMGeo: Benchmarking Large Language Models on Image Geolocation In-the-wild},
+   url = {http://arxiv.org/abs/2405.20363},
+   year = {2024}
+}
+@techReport{Devant2024,
+   author = {Présentée Devant},
+   title = {HABILITATION A DIRIGER DES RECHERCHES},
+   year = {2024}
+}
+@article{Sultanov2024,
+   abstract = {This study explores the application of Large Language Models (LLMs), particularly GPT-4o, to textual geotagging, introducing a novel dataset of tweets with geographical annotations. Using zero-shot and few-shot approaches, we demonstrate GPT-4o's ability to infer location from explicit and implicit textual references in tweets, achieving average errors as low as 43 km for explicit mentions. Our experiments reveal LLMs' robust geographical knowledge and adaptability to geotagging tasks with minimal context. The research also highlights LLMs' potential in advancing geographical inference from text, identifying challenges and effects of data quality, and opportunities for improving model performance on implicit references and noisy data.},
+   author = {Azamat Sultanov},
+   doi = {10.32603/2071-2340-2024-3-2},
+   issn = {20712340},
+   journal = {Computer Tools in Education},
+   month = {10},
+   pages = {30-47},
+   title = {Leveraging Large Language Models for Textual Geotagging: A Novel Approach to Location Inference},
+   url = {http://cte.eltech.ru/ojs/index.php/kio/article/view/1845},
+   year = {2024}
+}
